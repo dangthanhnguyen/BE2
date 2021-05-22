@@ -11,4 +11,8 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     protected $table = 'category';
+
+    public function categoriesCompanies() {
+        return $this->hasMany(Companies::class,'category_id','category_id');
+    }
 }

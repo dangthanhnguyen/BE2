@@ -52,6 +52,7 @@
                         <th scope="col">CompaniesID</th>
                         <th scope="col">Email</th>
                         <th scope="col">Phone</th>
+                        <th scope="col">Companies Name</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -62,6 +63,8 @@
                         <td><?php echo $item->company_id ?></td>
                         <td><?php echo $item->trainer_email ?></td>
                         <td><?php echo $item->trainer_phone ?></td>
+                        <td><?php echo $item->trainersCompanies['company_name'] ?></td>
+
                     </tr>
                     @endforeach
 

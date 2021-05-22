@@ -16,4 +16,8 @@ class Trainers extends Model
         $data = self::where('trainer_name', 'like', "%".$input."%")->paginate(10);
         return $data;
     }
+
+    public function trainersCompanies() {
+        return $this->hasOne(Companies::class,'company_id','company_id');
+    }
 }
