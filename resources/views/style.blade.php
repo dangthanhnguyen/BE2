@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Laravel</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- Styles -->
-    <style>
+<style>
         /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
         html {
             line-height: 1.15;
@@ -390,82 +380,10 @@
             }
         }
     </style>
-
-    <style>
-        body {
-            font-family: 'Nunito', sans-serif;
-        }
-    </style>
 </head>
 
-<body class="antialiased">
-    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-        <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
-        <nav class="my-2 my-md-0 mr-md-3">
-            <a class="p-2 text-dark" href="/companies">Companies</a>
-            <a class="p-2 text-dark" href="/category">Category</a>
-            <a class="p-2 text-dark" href="/trainers">Trainer</a>
-        </nav>
-    </div>
-
-    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-        <h1 class="display-4">Pricing</h1>
-    </div>
-
-    <div class="container">
-
-        <form action="/category" method="get">
-            <input type="search" name="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-            <button type="submit" class="btn btn-outline-primary">search</button>
-        </form>
+<body>
+   
 </body>
-
-<div class="table-responsive">
-    <table class="table">
-
-        <thead>
-            <tr>
-                <th scope="col">Category_id</th>
-                <th scope="col">Category_name</th>
-
-            </tr>
-        </thead>
-        @isset($_GET['search'])
-
-        <tbody>
-            @foreach($category as $item):
-            <tr>
-                <th scope="row"><?php echo $item->category_id ?></th>
-                <td><?php echo $item->category_name ?></td>
-                <td>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th scope="col">Company_id</th>
-                                <th scope="col">Company_name</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                        @foreach($item->categoriesCompanies as $item2):
-                            <tr>
-                                <th scope="col"><?php echo $item2->company_id ?></th>
-                                <th scope="col"><?php echo $item2->company_name ?></th>
-                            </tr>
-                        @endforeach
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-            @endforeach
-
-        </tbody>
-        @endif
-
-    </table>
-    <?php echo $search->links() ?>
-</div>
-
-</div>
 
 </html>

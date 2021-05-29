@@ -2,14 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Laravel</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    @include('meta');
     <!-- Styles -->
     <style>
         /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -399,18 +392,7 @@
 </head>
 
 <body class="antialiased">
-    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-        <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
-        <nav class="my-2 my-md-0 mr-md-3">
-            <a class="p-2 text-dark" href="/companies">Companies</a>
-            <a class="p-2 text-dark" href="/category">Category</a>
-            <a class="p-2 text-dark" href="/trainers">Trainer</a>
-        </nav>
-    </div>
-
-    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-        <h1 class="display-4">Pricing</h1>
-    </div>
+    @include('header');
 
     <div class="container">
 
@@ -421,7 +403,7 @@
         {!! Form::label('category_id', 'Category :') !!}
         {!! Form::select('category_id', $category, null, ['class' => 'form-control']) !!}
 
-
+    
 </body>
 
 <div class="table-responsive">
@@ -462,6 +444,8 @@
     <?php echo $search->links() ?>
     @endif
 </div>
+</div>
+@include('footer');
 
 
 </html>

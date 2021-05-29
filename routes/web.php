@@ -28,4 +28,4 @@ Route::get('/search', [SearchController::class, 'search']);
 
 Route::get('/category', [CategoryController::class, 'category']);
 
-Route::get('/categorycompany', [CategoryController::class, 'categorycompany']);
+//Route::get('/categorycompany', [CategoryController::class, 'categorycompany']);

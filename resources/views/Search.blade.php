@@ -21,25 +21,7 @@
         </style>
     </head>
     <body class="antialiased">
-        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-            <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
-            <nav class="my-2 my-md-0 mr-md-3">
-                <a class="p-2 text-dark" href="/companies">Companies</a>
-                <a class="p-2 text-dark" href="/category">Category</a>
-                <a class="p-2 text-dark" href="/trainers">Trainer</a>
-                <form action="/search" method="get">
-                    <input type="search" name="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-                           aria-describedby="search-addon" />
-                    <button type="submit" class="btn btn-outline-primary">search</button>
-                </form>
-
-            </nav>
-        </div>
-
-        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-            <h1 class="display-4">Pricing</h1>
-         
-        </div>
+    @include('header');
 
         <div class="container">
             
@@ -72,43 +54,7 @@
             <?php echo $search->links() ?>
         </div>
 
-        <footer class="pt-4 my-md-5 pt-md-5 border-top">
-            <div class="row">
-                <div class="col-12 col-md">
-                    <img class="mb-2" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="24" height="19">
-                    <small class="d-block mb-3 text-muted">© 2017–2021</small>
-                </div>
-                <div class="col-6 col-md">
-                    <h5>Features</h5>
-                    <ul class="list-unstyled text-small">
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md">
-                    <h5>Resources</h5>
-                    <ul class="list-unstyled text-small">
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md">
-                    <h5>About</h5>
-                    <ul class="list-unstyled text-small">
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
+        @include('footer');
 
 
 

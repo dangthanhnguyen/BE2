@@ -11,7 +11,7 @@ class Companies extends Model
 
     public function search($value,$id){
         $search_query = '%'.$value.'%';
-        return self::where('company_name','like',$search_query) ->orwhere('company_phone','like',$search_query)->where('category_id','=',$id)->paginate(15);
+        return self::where('company_name','like',$search_query) ->orwhere('company_phone','like',$search_query)->where('category_id','=',$id)->paginate(20);
     }
 
     public function trainersCompanies() {
