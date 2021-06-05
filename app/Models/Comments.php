@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Trainers extends Model
+class Comments extends Model
 {
-    protected $table = 'trainers';
-    protected $primaryKey = 'trainer_id';
+    protected $table = 'comments';
+    protected $primaryKey = 'comment_id';
 }

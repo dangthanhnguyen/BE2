@@ -2,13 +2,14 @@
 
 namespace Database\Seeders;
 
+use DateTime;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Illuminate\Database\Migrations\Migration;
 
-class CategorySeeder extends Seeder
+class FacultySeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,9 +18,10 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        for ($i=0; $i < 20000; $i++) { 
-            DB::table('category')->insert([
-                'category_name' => Str::random(10),
+        for ($i=0; $i < 20; $i++) { 
+            DB::table('faculties')->insert([
+                'faculty_name' => Str::random(10),
+                'status' => 1,
             ]);
         }
     }

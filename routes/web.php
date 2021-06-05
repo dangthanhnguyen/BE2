@@ -20,12 +20,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/companies', [CompaniesController::class, 'companies']);
+// Route::get('/companies', [CompaniesController::class, 'companies']);
 
-Route::get('/trainers', [TrainersController::class, 'trainers']);
+// Route::get('/trainers', [TrainersController::class, 'trainers']);
 
-Route::get('/search', [SearchController::class, 'search']);
+// Route::get('/search', [SearchController::class, 'search']);
 
-Route::get('/category', [CategoryController::class, 'category']);
+// Route::get('/category', [CategoryController::class, 'category']);
 
 //Route::get('/categorycompany', [CategoryController::class, 'categorycompany']);

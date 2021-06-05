@@ -21,40 +21,16 @@
         </style>
     </head>
     <body class="antialiased">
-    @include('header');
 
         <div class="container">
             
             <table class="table">
 
-                <thead>
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">CompaniesID</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Phone</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($search as $item):
-                    <tr>
-                        <td><?php echo $item->trainer_id ?></th>
-                        <td><?php echo $item->trainer_name ?></td>
-                        <td><?php echo $item->company_id ?></td>
-                        <td><?php echo $item->trainer_email ?></td>
-                        <td><?php echo $item->trainer_phone ?></td>
-                    </tr>
-                    @endforeach
-
-                </tbody>
 
             </table>
 
-            <?php echo $search->links() ?>
         </div>
 
-        @include('footer');
 
 
 

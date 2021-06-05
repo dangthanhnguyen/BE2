@@ -12,9 +12,9 @@ use \Illuminate\Http\Request;
 
 class SearchController extends Controller
 {
-    public function search(Request $request) {
-        $obj = new Trainers();
-        $search = $obj->search($request->get('search'));
-        return view('search', ['search' => $search]);
-    }
+    // public function search(Request $request) {
+    //     $obj = new Trainers();
+    //     $search = $obj->search($request->get('search'));
+    //     return view('search', ['search' => $search]);
+    // }
 }

@@ -392,7 +392,6 @@
 </head>
 
 <body class="antialiased">
-    @include('header');
 
     <div class="container">
 
@@ -400,52 +399,24 @@
             <input type="search" name="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
             <button type="submit" class="btn btn-outline-primary">search</button>
         </form>
-        {!! Form::label('category_id', 'Category :') !!}
-        {!! Form::select('category_id', $category, null, ['class' => 'form-control']) !!}
+
 
     
 </body>
 
 <div class="table-responsive">
-    @isset($_GET['search'])
+ 
     <table class="table">
 
-        <thead>
-            <tr>
-                <th scope="col">CompanyID</th>
-                <th scope="col">CompanyName</th>
-                <th scope="col">CompanyWeb</th>
-                <th scope="col">CompanyAddress</th>
-                <th scope="col">CompanyCode</th>
-                <th scope="col">CompanyPhone</th>
-                <th scope="col">CategoryID</th>
-            </tr>
-        </thead>
-
-
-        <tbody>
-            @foreach($search as $item):
-            <tr>
-                <th scope="row"><?php echo $item->company_id ?></th>
-                <td><?php echo $item->company_name ?></td>
-                <td><?php echo $item->company_web ?></td>
-                <td><?php echo $item->company_address ?></td>
-                <td><?php echo $item->company_code ?></td>
-                <td><?php echo $item->company_phone ?></td>
-                <td><?php echo $item->category_id ?></td>
-            </tr>
-            @endforeach
-
-        </tbody>
+       
 
 
     </table>
 
-    <?php echo $search->links() ?>
-    @endif
+    
 </div>
 </div>
-@include('footer');
+
 
 
 </html>

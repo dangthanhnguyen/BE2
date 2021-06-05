@@ -14,43 +14,13 @@
         </style>
     </head>
     <body class="antialiased">
-    @include('header');
-
         <div class="container">
-
             <table class="table">
 
-                <thead>
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">CompaniesID</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Phone</th>
-                        <th scope="col">Companies Name</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($trainers as $item):
-                    <tr>
-                        <td><?php echo $item->trainer_id ?></th>
-                        <td><?php echo $item->trainer_name ?></td>
-                        <td><?php echo $item->company_id ?></td>
-                        <td><?php echo $item->trainer_email ?></td>
-                        <td><?php echo $item->trainer_phone ?></td>
-                        <td><?php echo $item->trainersCompanies['company_name'] ?></td>
-
-                    </tr>
-                    @endforeach
-
-                </tbody>
-
+                
             </table>
-
-            <?php echo $trainers->links() ?>
         </div>
 
-        @include('footer');
 
 
 

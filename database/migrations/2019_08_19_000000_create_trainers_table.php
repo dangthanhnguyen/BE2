@@ -15,10 +15,13 @@ class CreateTrainersTable extends Migration
     {
         Schema::create('trainers', function (Blueprint $table) {
             $table->id('trainer_id');
-            $table->string('trainer_name',55);
+            $table->integer('is_leader',false);
             $table->integer('company_id',false);
-            $table->string('trainer_email',55);       
-            $table->string('trainer_phone',55); 
+            $table->integer('user_id',false);
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('delete_at')->nullable();
+            $table->integer('status',false); 
         });
     }
 
