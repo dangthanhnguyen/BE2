@@ -2,28 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Routing\Controller as BaseController;
-
-use App\Models\Category;
-use App\Models\Companies;
 use Illuminate\Http\Request;
+use App\Models\Category;
 
 class CategoryController extends Controller
 {
-    // public function category(Request $rq) {
-    //     $value = $rq->get('search');
-    //     $id = $rq->get('category_id');
-
-    //     $obj = new Category();
-    //     $obj_companies = new Companies();
-    //     $category = $obj->pluck('category_name','category_id');
-
-    //     $companies = $obj_companies->search($value, $id);
-        
-        
-    //     return view('category', ['category' => $category, 'search' => $companies]);
-    // }
+    public function categories()
+    {      
+        $obj = new Category();
+        $categories = $obj->pluck('category_name', 'category_id');
+        $cats = $obj->paginate(2);
+        return view('categories',['categories'=>$categories],['cats'=>$cats]);
+    }
 }

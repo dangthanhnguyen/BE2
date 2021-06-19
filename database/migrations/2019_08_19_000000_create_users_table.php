@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('delete_at')->nullable();
-            $table->integer('status',false); 
+            $table->integer('status',false)->nullable(); 
         });
     }
 
